@@ -1,0 +1,45 @@
+.root {
+    -fx-font-family:'Open Sans', sans-serif;
+
+}
+#top-bar {
+    -fx-color: #A2E555;
+}
+#CSBT {
+    -fx-font-size: 30;
+}
+.button{
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: #000000;
+}
+
+.button:hover {
+    -fx-background-color: #aec982;
+}
+
+.button:pressed {
+    -fx-background-color: #8da466;
+    -fx-text-fill: black;
+}
+
+#table {
+    -fx-color: rgba(162,246,85, 0.75);
+    -fx-border-color: rgba(91,115,120,0.5);
+}
+
+#date-pane {
+    -fx-border-color: transparent;
+}
+.text-field {
+    -fx-border-color: rgba(91,115,120,0.5);
+}
+#date1 {
+    -fx-color: #A2E555;
+}
+
+#txt-bold {
+    -fx-font-weight: bold;
+}

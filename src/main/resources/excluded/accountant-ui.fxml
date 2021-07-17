@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="bg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="862.0" stylesheets="@../ui.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.accountant.ui.FXMLAccountantWindowController">
+    <cursor>
+        <Cursor fx:constant="DEFAULT" />
+    </cursor>
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4e3561a" height="600.0" stroke="#a2e55540" strokeType="INSIDE" width="862.0" />
+        <AnchorPane id="top-bar" prefHeight="65.0" prefWidth="862.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a2f555bf" height="97.0" stroke="#5b737880" strokeType="INSIDE" width="862.0" />
+                <Text id="CSBT" layoutX="111.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cebu South Bus Terminal" />
+                <Text layoutX="685.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acct01" wrappingWidth="70.63959747552872" />
+                <Button layoutX="756.0" mnemonicParsing="false" onAction="#logoutButtonPushed" prefHeight="97.0" prefWidth="106.0" text="Logout" />
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="97.0" prefWidth="106.0">
+            <children>
+                <ImageView fitHeight="71.0" fitWidth="92.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../res/22501017_1700163576683456_2070303521_n.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <TableView id="table" fx:id="tableView" layoutX="86.0" layoutY="202.0" prefHeight="313.0" prefWidth="697.0">
+            <columns>
+                <TableColumn id="col" fx:id="columnFranchise" prefWidth="136.0" resizable="false" text="FRANCHISE" />
+                <TableColumn id="col" fx:id="columnBusSize" prefWidth="136.0" resizable="false" text="BUS TYPE" />
+                <TableColumn id="col" fx:id="columnArrivalFee" prefWidth="136.0" text="AF" />
+                <TableColumn id="col" fx:id="columnLoadingFee" prefWidth="136.0" text="LF" />
+                <TableColumn id="col" fx:id="columnOrNum" prefWidth="136.0" text="OR#" />
+            </columns>
+        </TableView>
+        <AnchorPane id="date-pane" layoutX="94.0" layoutY="134.0" prefHeight="50.0" prefWidth="204.0">
+            <children>
+                <Rectangle id="date1" arcHeight="5.0" arcWidth="5.0" fill="#a2f555bf" height="27.0" stroke="#5b737880" strokeType="INSIDE" width="206.0" />
+                <Rectangle id="date2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutY="27.0" stroke="#5b737880" strokeType="INSIDE" width="206.0" />
+                <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date:" />
+                <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date:" />
+                <DatePicker fx:id="dateStartDate" layoutX="82.0" onAction="#dateStartDateUpdated" prefHeight="27.0" prefWidth="124.0" promptText="Start Date" />
+                <DatePicker fx:id="dateEndDate" layoutX="82.0" layoutY="27.0" onAction="#dateEndDateUpdated" prefHeight="27.0" prefWidth="124.0" promptText="End Date" />
+            </children></AnchorPane>
+        <AnchorPane id="date-pane" layoutX="310.0" layoutY="134.0" prefHeight="56.0" prefWidth="487.0">
+            <children>
+                <Rectangle id="date1" arcHeight="5.0" arcWidth="5.0" fill="#a2f555bf" height="27.0" stroke="#5b737880" strokeType="INSIDE" width="463.0" />
+                <Rectangle id="date2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="27.0" layoutY="27.0" stroke="#5b737880" strokeType="INSIDE" width="463.0" />
+                <Text id="txt-bold" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUMMARY" />
+                <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Earnings:" />
+                <Label fx:id="lblTotalEarnings" layoutX="98.0" layoutY="32.0" text="N/A" />
+            </children>
+        </AnchorPane>
+        <TextField fx:id="txtTotalArrivalFees" layoutX="359.0" layoutY="514.0" prefHeight="27.0" prefWidth="137.0" />
+        <TextField fx:id="txtTotalLoadingFees" layoutX="495.0" layoutY="514.0" prefHeight="27.0" prefWidth="137.0" />
+        <TextField fx:id="txtTotalAllFees" layoutX="359.0" layoutY="540.0" prefHeight="27.0" prefWidth="273.0" />
+        <Text id="txt-bold" layoutX="310.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL" />
+    </children>
+</AnchorPane>

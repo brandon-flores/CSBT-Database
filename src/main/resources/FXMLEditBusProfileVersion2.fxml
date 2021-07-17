@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="305.0" prefWidth="700.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.admin.ui.FXMLEditBusProfileController">
+   <children>
+      <AnchorPane opacity="0.8" prefHeight="41.0" prefWidth="700.0" style="-fx-background-color: #D3E1AC;">
+         <children>
+            <Text layoutX="15.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUS PROFILES">
+               <font>
+                  <Font name="Open Sans Bold" size="23.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="editProfilesCancelButton" buttonType="RAISED" layoutX="592.0" layoutY="1.0" onAction="#editProfilesCancelPressed" prefHeight="40.0" prefWidth="100.0" text="Cancel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="editProfilesTerminateButton" buttonType="RAISED" layoutX="470.0" layoutY="1.0" onAction="#editProfilesTerminatePressed" prefHeight="40.0" prefWidth="111.0" text="TERMINATE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Text layoutX="32.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact person:">
+         <font>
+            <Font name="Open Sans Semibold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact number:">
+         <font>
+            <Font name="Open Sans Semibold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Franchise:">
+         <font>
+            <Font name="Open Sans Semibold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plate no.:">
+         <font>
+            <Font name="Open Sans Semibold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="348.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size:">
+         <font>
+            <Font name="Open Sans Semibold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="379.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Route:">
+         <font>
+            <Font name="Open Sans Semibold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="345.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:">
+         <font>
+            <Font name="Open Sans Semibold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="editProfilesCPerson" layoutX="163.0" layoutY="55.0" promptText="Brandon Jay Flores" style="-fx-background-color: #ffffff; -fx-border-color: #A9A9A9;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="editProfilesCNumber" layoutX="164.0" layoutY="111.0" promptText="09569081042" style="-fx-background-color: #ffffff; -fx-border-color: #A9A9A9;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="editProfilesFranchise" layoutX="114.0" layoutY="165.0" prefHeight="32.0" prefWidth="130.0" promptText="CERES" style="-fx-background-color: #ffffff; -fx-border-color: #A9A9A9;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="editProfilesPlateNo" layoutX="114.0" layoutY="215.0" prefHeight="32.0" prefWidth="130.0" promptText="ABC123" style="-fx-background-color: #ffffff; -fx-border-color: #A9A9A9;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="editProfilesRoute2" layoutX="536.0" layoutY="112.0" prefHeight="32.0" prefWidth="111.0" promptText="ARGAO" style="-fx-background-color: #ffffff; -fx-border-color: #A9A9A9;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="editProfilesEditButton" layoutY="268.0" onAction="#editProfilesEditPressed" prefHeight="37.0" prefWidth="700.0" style="-fx-background-color: #D3E1AC;" text="EDIT">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="contactPersonErr" layoutX="164.0" layoutY="86.0" prefHeight="17.0" prefWidth="246.0" text="! Error: Please enter name of contact person." textFill="#ff0505" visible="false" />
+      <Label fx:id="contactNumberErr" layoutX="165.0" layoutY="142.0" text="! Error: Please enter number of contact person." textFill="RED" visible="false" />
+      <TextField fx:id="editProfilesRoute1" editable="false" layoutX="429.0" layoutY="113.0" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FFFFFF;" text="CEBU CITY">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="514.0" layoutY="116.0" text="to">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="radioBoxMiniBus" layoutX="391.0" layoutY="225.0" mnemonicParsing="false" onAction="#radioBoxMinibusSelected" text="MINI BUS" />
+      <JFXRadioButton fx:id="radioBoxBus" layoutX="500.0" layoutY="225.0" mnemonicParsing="false" onAction="#radioBoxBusSelected" prefHeight="17.0" prefWidth="45.0" text="BUS" />
+      <JFXRadioButton fx:id="radioBoxAircon" layoutX="391.0" layoutY="174.0" mnemonicParsing="false" onAction="#radioBoxAirconSelected" text="AIRCON" />
+      <JFXRadioButton fx:id="radioBoxNonAircon" layoutX="500.0" layoutY="174.0" mnemonicParsing="false" onAction="#radioBoxNonAirconSelected" text="NON-AIRCON" />
+      <Label fx:id="franchiseErr" layoutX="114.0" layoutY="197.0" text="! Error: Please enter name of franchise." textFill="RED" visible="false" />
+      <Label fx:id="plateNoErr" layoutX="114.0" layoutY="246.0" text="! Error: Please enter a plate number." textFill="RED" visible="false" />
+      <Label fx:id="routeErr" layoutX="443.0" layoutY="142.0" text="! Error: Please enter a valid destination." textFill="RED" visible="false" />
+      <Label fx:id="typeErr" layoutX="430.0" layoutY="190.0" text="! Error: Please check one." textFill="RED" visible="false" />
+      <Label fx:id="sizeErr" layoutX="430.0" layoutY="240.0" text="! Error: Please check one." textFill="RED" visible="false" />
+      <TextField fx:id="editProfilesRfid" layoutX="439.0" layoutY="55.0" prefHeight="32.0" prefWidth="164.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="380.0" layoutY="60.0" text="RFID:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="rfidErr" layoutX="445.0" layoutY="85.0" prefHeight="17.0" prefWidth="211.0" text="! Error: RFID value exists." textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

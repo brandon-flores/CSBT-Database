@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cashier.ui.FXMLTransactionsController">
+   <children>
+      <ImageView fitHeight="45.0" fitWidth="200.0" layoutX="51.0" layoutY="33.0">
+         <image>
+            <Image url="@LOGO.png" />
+         </image>
+      </ImageView>
+      <Text fill="#273a84" layoutX="573.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome," wrappingWidth="87.13671875">
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="cashierUserText" fill="#273a84" layoutX="654.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JJuan" wrappingWidth="118.55029562488198">
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="transactLogoutButton" focusTraversable="false" layoutX="768.0" layoutY="27.0" onAction="#transactLogoutButtonPressed" prefHeight="50.0" prefWidth="100.0" ripplerFill="WHITE" text="Logout" textAlignment="CENTER" textFill="#273a84" wrapText="true">
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="transactionsTable" focusTraversable="false" layoutX="32.0" layoutY="341.0" prefHeight="331.0" prefWidth="836.0" style="-fx-border-color: #273A84; -fx-border-radius: 4px; -fx-border-width: 1.5px;">
+        <columns>
+          <TableColumn fx:id="transactDate" editable="false" prefWidth="100.0" text="Date" />
+          <TableColumn fx:id="transactTime" editable="false" prefWidth="100.0" text="Time" />
+            <TableColumn fx:id="transactOR" editable="false" prefWidth="140.0" text="OR No." />
+            <TableColumn fx:id="transactPlateNum" editable="false" prefWidth="140.0" text="Plate No." />
+            <TableColumn fx:id="transactFee" editable="false" text="Fee type" />
+            <TableColumn fx:id="transactAmount" editable="false" prefWidth="140.0" text="Amount" />
+            <TableColumn fx:id="transactStatus" editable="false" prefWidth="115.0" text="Status" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="426.0" layoutY="170.0" prefHeight="159.0" prefWidth="444.0" style="-fx-background-color: #ffffff; -fx-border-color: #808181; -fx-border-width: 1.2px; -fx-border-radius: 4px;">
+         <children>
+            <TextField fx:id="transactQuantityAF" editable="false" focusTraversable="false" layoutX="155.0" layoutY="28.0" opacity="0.95" prefHeight="65.0" prefWidth="91.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="transactQuantityLF" editable="false" focusTraversable="false" layoutX="154.0" layoutY="72.0" opacity="0.95" prefHeight="65.0" prefWidth="91.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="transactAmountAF" editable="false" focusTraversable="false" layoutX="289.0" layoutY="29.0" opacity="0.95" prefHeight="65.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="transactAmountLF" editable="false" focusTraversable="false" layoutX="289.0" layoutY="75.0" opacity="0.95" prefHeight="65.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </TextField>
+            <Text layoutX="175.0" layoutY="35.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="320.0" layoutY="34.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrival Fee">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loading Fee">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="120.0" layoutY="85.0" opacity="0.3" startX="-100.0" />
+            <Line endX="100.0" layoutX="321.0" layoutY="85.0" opacity="0.3" startX="-100.0" />
+            <Text layoutX="286.0" layoutY="72.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="₱">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="284.0" layoutY="117.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="₱">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="221.0" prefHeight="108.0" prefWidth="382.0" style="-fx-background-color: #ffffff; -fx-border-color: #808181; -fx-border-width: 1.2px; -fx-border-radius: 4px;">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Revenue:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="transactTotalRevenue" editable="false" focusTraversable="false" layoutX="135.0" layoutY="19.0" prefHeight="77.0" prefWidth="219.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </TextField>
+            <Text layoutX="123.0" layoutY="70.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="₱">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="169.0" prefHeight="40.0" prefWidth="382.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <DatePicker fx:id="transactDateTo" focusTraversable="false" layoutX="211.0" layoutY="1.0" onAction="#dateEndDateUpdated" prefHeight="38.0" prefWidth="170.0" style="-fx-border-color: #a3a3a3; -fx-background-color: #ffffff; -fx-border-radius: 4px;" />
+            <DatePicker fx:id="transactDateFrom" focusTraversable="false" layoutX="1.0" layoutY="1.0" onAction="#dateStartDateUpdated" prefHeight="38.0" prefWidth="170.0" style="-fx-border-color: #a3a3a3; -fx-background-color: #ffffff; -fx-border-radius: 4px;" />
+            <Text layoutX="163.0" layoutY="26.0" opacity="0.74" stroke="BLACK" text="--" textAlignment="CENTER" wrappingWidth="57.1953125">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="transactBackButton" focusTraversable="false" layoutX="768.0" layoutY="129.0" onAction="#transactBackButtonPressed" prefWidth="100.0" style="-fx-background-color: #273A84;" text="BACK" textFill="WHITE" />
+   </children>
+</AnchorPane>

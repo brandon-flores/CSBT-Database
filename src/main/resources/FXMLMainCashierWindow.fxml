@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cashier.ui.FXMLMainCashierWindowController">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="208.0" layoutX="44.0" layoutY="25.0" preserveRatio="true">
+         <image>
+            <Image url="@LOGO.png" />
+         </image>
+      </ImageView>
+      <Text fill="#273a84" layoutX="563.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome," wrappingWidth="87.13671875">
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="cashierUserText" fill="#273a84" layoutX="644.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JJuan" wrappingWidth="123.99999503977597">
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="logoutButton" buttonType="RAISED" contentDisplay="CENTER" ellipsisString="" focusTraversable="false" graphicTextGap="1.0" layoutX="758.0" layoutY="18.0" onAction="#arrivalWindowLogoutPressed" prefHeight="50.0" prefWidth="100.0" ripplerFill="#273a84" text="Logout" textFill="#273a84">
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="223.0" layoutY="166.0" prefHeight="200.0" prefWidth="460.0" snapToPixel="false" style="-fx-background-color: #f4f4f4; -fx-border-color: #273a84; -fx-border-radius: 4px; -fx-max-width: 460;">
+         <children>
+            <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="32.0" prefWidth="460.0" style="-fx-background-color: #273a84; -fx-border-radius: 5px;">
+               <children>
+                  <Text fill="WHITE" layoutX="164.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRANSACTIONS">
+                     <font>
+                        <Font name="Consolas" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </AnchorPane>
+            <JFXButton fx:id="busPrintButton" focusTraversable="false" layoutX="367.0" layoutY="158.0" onAction="#busPrintButtonPressed" prefHeight="33.0" prefWidth="87.0" style="-fx-background-color: #273a84;" text="PRINT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="37.0" layoutY="70.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="Plate number">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="plateNumber" focusTraversable="false" layoutX="37.0" layoutY="79.0" prefHeight="56.0" prefWidth="223.0" style="-fx-background-color: #ffffff; -fx-border-color: #a3a3a3;">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font></TextField>
+            <JFXCheckBox fx:id="arrivalFee" focusTraversable="false" layoutX="299.0" layoutY="63.0" opacity="0.75" prefHeight="40.0" prefWidth="100.0" text="Arrival Fee">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="loadingFee" focusTraversable="false" layoutX="299.0" layoutY="107.0" opacity="0.75" prefHeight="35.0" prefWidth="124.0" text="Loading Fee">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXCheckBox>
+            <Label fx:id="noPlate" layoutX="37.0" layoutY="142.0" text="Label" textFill="RED" />
+            <Label fx:id="noCheck" layoutX="299.0" layoutY="142.0" text="Label" textFill="RED" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <padding>
+            <Insets right="-1.0" />
+         </padding></AnchorPane>
+      <JFXButton fx:id="voidButton" alignment="TOP_CENTER" focusTraversable="false" layoutX="224.0" layoutY="450.0" onAction="#arrivalWindowVoidPressed" prefHeight="42.0" prefWidth="460.0" style="-fx-background-color: #273A84; -fx-border-radius: 5px;" text="SUBMIT VOID REQUEST" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+      </JFXButton>
+      <JFXButton fx:id="transactionsButton" alignment="TOP_CENTER" focusTraversable="false" layoutX="224.0" layoutY="391.0" onAction="#transactionsButtonPressed" prefHeight="42.0" prefWidth="460.0" style="-fx-background-color: #273A84; -fx-border-radius: 5px;" text="VIEW PREVIOUS TRANSACTIONS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="rangeButton" focusTraversable="false" layoutX="663.0" layoutY="644.0" onAction="#rangeButtonPressed" prefHeight="42.0" prefWidth="223.0" style="-fx-background-color: #273A84;" text="INPUT O.R. NUMBER RANGE" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Text fill="#273a84" layoutX="24.0" layoutY="678.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CURRENT:" wrappingWidth="87.13672310113907">
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="currentORNumber" fill="#273a84" layoutX="104.0" layoutY="678.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000142" wrappingWidth="123.99999503977597">
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font>
+      </Text>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

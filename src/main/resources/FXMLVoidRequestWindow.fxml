@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="532.0" style="-fx-background-color: #FFFFFF; -fx-border-width: 1.3px; -fx-border-color: #7c1b2e;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cashier.ui.FXMLVoidRequestWindowController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c1b2e" height="35.0" stroke="#7c1b2e" strokeType="INSIDE" width="532.0" />
+      <Text fill="WHITE" layoutX="11.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEND VOID REQUEST">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="194.0" layoutX="75.0" layoutY="87.0" stroke="#e1e1e1" strokeType="INSIDE" width="399.0" />
+      <JFXButton focusTraversable="false" layoutX="352.0" layoutY="373.0" onAction="#sendVoidPressed" prefHeight="40.0" prefWidth="151.0" style="-fx-background-color: #7C1B2E;" text="SUBMIT VOID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="cancel" focusTraversable="false" layoutX="449.0" layoutY="-1.0" mnemonicParsing="false" onAction="#cancelPressed" text="CANCEL" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXButton>
+      <Text layoutX="22.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure you want to cancel this transaction?">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="DateTimeTextField1" editable="false" focusTraversable="false" layoutX="108.0" layoutY="107.0" prefHeight="37.0" prefWidth="288.0" style="-fx-background-color: #ffffff;" text="07/07/98       2:37 AM">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="plateTextField" editable="false" focusTraversable="false" layoutX="180.0" layoutY="223.0" style="-fx-background-color: #ffffff;" text="ACS 2047">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="orNoTextField" editable="false" focusTraversable="false" layoutX="168.0" layoutY="91.0" style="-fx-background-color: #ffffff;" text="0000024">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Text layoutX="119.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O.R. no.">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <TextField fx:id="totalTextField" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="186.0" layoutY="183.0" prefHeight="48.0" prefWidth="236.0" style="-fx-background-color: #ffffff;" text="100">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></TextField>
+      <TextField fx:id="busCompTextField1" editable="false" focusTraversable="false" layoutX="211.0" layoutY="248.0" style="-fx-background-color: #ffffff;" text="CERES">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Text layoutX="120.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrival Fee">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="119.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Due">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="119.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loading Fee">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="120.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plate No.">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="120.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bus Company">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <TextField fx:id="loadFeeTextField" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="244.0" layoutY="167.0" style="-fx-background-color: #ffffff;" text="50">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="arrivFeeTextField" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="244.0" layoutY="141.0" style="-fx-background-color: #ffffff;" text="50">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Text layoutX="37.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="38.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your voided transaction will be recorded. Please be reminded that">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="37.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="multiple voided transactions may be a basis for">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="37.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="disciplinary action.">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

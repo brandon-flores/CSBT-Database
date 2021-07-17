@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="343.0" prefWidth="804.0" style="-fx-background-color: #ffffff; -fx-border-color: #7C1B2E; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.admin.ui.FXMLCreateAccountController">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="40.0" prefWidth="800.0" style="-fx-background-color: #7C1B2E;">
+         <children>
+            <Text fill="WHITE" layoutX="15.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE AN ACCOUNT">
+               <font>
+                  <Font name="Open Sans Bold" size="23.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="createAccountCancelButton" buttonType="RAISED" focusTraversable="false" layoutX="700.0" layoutY="-2.0" onAction="#createAccountCancelPressed" prefHeight="40.0" prefWidth="100.0" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="createAccountCreateButton" focusTraversable="false" layoutX="588.0" layoutY="271.0" onAction="#createProfileCreatePressed" prefHeight="42.0" prefWidth="172.0" style="-fx-background-color: #7C1B2E;" text="CREATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="createAccountUsername" focusTraversable="false" layoutX="318.0" layoutY="117.0" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: a3a3a3;">
+         <font>
+            <Font name="Consolas" size="15.0" />
+         </font></TextField>
+      <ComboBox fx:id="createAccountType" focusTraversable="false" layoutX="591.0" layoutY="117.0" prefHeight="40.0" prefWidth="166.0" style="-fx-border-color: #a3a3a3; -fx-background-color: #ffffff;" />
+      <TextField fx:id="createAccountFirstName" focusTraversable="false" layoutX="50.0" layoutY="117.0" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: #a3a3a3;">
+         <font>
+            <Font name="Consolas" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="createAccountLastName" focusTraversable="false" layoutX="50.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: a3a3a3;">
+         <font>
+            <Font name="Consolas" size="15.0" />
+         </font></TextField>
+      <PasswordField fx:id="createAccountPassword" focusTraversable="false" layoutX="318.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: #a3a3a3;">
+         <font>
+            <Font name="Consolas" size="15.0" />
+         </font></PasswordField>
+      <Text layoutX="50.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First name:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="50.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="318.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="318.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="591.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account type:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="errorCheck" fill="#b20000" layoutX="50.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Text>
+      <Label fx:id="firstErr" focusTraversable="false" layoutX="54.0" layoutY="157.0" text="! Error: Please enter first name." textFill="RED" visible="false" />
+      <Label fx:id="lastErr" focusTraversable="false" layoutX="54.0" layoutY="245.0" text="! Error: Please enter last name." textFill="RED" visible="false" />
+      <Label fx:id="userErr" focusTraversable="false" layoutX="321.0" layoutY="157.0" text="! Error: Please enter username." textFill="RED" visible="false" />
+      <Label fx:id="passErr" focusTraversable="false" layoutX="321.0" layoutY="245.0" text="! Error: Please enter password." textFill="RED" visible="false" />
+      <Label fx:id="existsErr" layoutX="46.0" layoutY="305.0" text="*Username already exists" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="typeErr" focusTraversable="false" layoutX="581.0" layoutY="157.0" text="! Error: Please choose account type." textFill="RED" visible="false" />
+   </children>
+   <padding>
+      <Insets right="-2.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="265.0" prefWidth="435.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #7c1b2e; -fx-border-width: 1.3px;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cashier.ui.FXMLGetRangeController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c1b2e" height="40.0" layoutY="-1.0" stroke="#7c1b2e" strokeType="INSIDE" width="435.0" />
+      <Text fill="WHITE" layoutX="10.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INPUT RANGE">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <TextField fx:id="lowRange" alignment="CENTER" focusTraversable="false" layoutX="35.0" layoutY="97.0" prefHeight="50.0" prefWidth="140.0" promptText="000123">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="highRange" alignment="CENTER" focusTraversable="false" layoutX="258.0" layoutY="97.0" prefHeight="50.0" prefWidth="140.0" promptText="000223">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Rectangle arcHeight="2.0" arcWidth="5.0" fill="#7c1b2e" height="3.0" layoutX="204.0" layoutY="122.0" stroke="#7c1b2e" strokeType="INSIDE" width="30.0" />
+      <JFXButton fx:id="enter" focusTraversable="false" layoutX="273.0" layoutY="203.0" onAction="#enterPressed" prefHeight="39.0" prefWidth="125.0" style="-fx-background-color: #7C1B2E;" text="SUBMIT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="cancel" focusTraversable="false" layoutX="363.0" mnemonicParsing="false" onAction="#cancelPressed" text="cancel" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXButton>
+      <Label fx:id="lblError" layoutX="35.0" layoutY="153.0" text="Label" textFill="RED" />
+   </children>
+</AnchorPane>

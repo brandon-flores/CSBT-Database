@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="950.0" style="-fx-background-color: #F7F5E6;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cashier.ui.FXMLArrivalWindowController">
+   <children>
+      <AnchorPane layoutX="180.0" layoutY="181.0" prefHeight="390.0" prefWidth="275.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <AnchorPane opacity="0.75" prefHeight="40.0" prefWidth="275.0" style="-fx-background-color: #D3E1AC;">
+               <children>
+                  <Text layoutX="120.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUS">
+                     <font>
+                        <Font name="Open Sans" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="busPrintButton" buttonType="RAISED" layoutY="355.0" onAction="#busConfirmButtonPushed" opacity="0.75" prefHeight="35.0" prefWidth="275.0" style="-fx-background-color: #D3E1AC; -fx-text-fill: #000000;" text="Print" AnchorPane.rightAnchor="0.0" />
+            <JFXComboBox fx:id="busFDD" layoutX="38.0" layoutY="105.0" prefHeight="35.0" prefWidth="200.0" promptText="CERES" />
+            <JFXCheckBox fx:id="arrivalFee" layoutX="38.0" layoutY="248.0" prefHeight="35.0" prefWidth="200.0" text="Arrival Fee (Php. 50)" />
+            <JFXCheckBox fx:id="loadingFee" layoutX="38.0" layoutY="287.0" prefHeight="35.0" prefWidth="200.0" text="Loading Fee (Php. 150)" />
+            <Text layoutX="38.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Franchise">
+               <font>
+                  <Font name="Open Sans" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="40.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bus number">
+               <font>
+                  <Font name="Open Sans" size="14.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="busNumber" layoutX="38.0" layoutY="195.0" prefHeight="35.0" prefWidth="200.0" />
+            <Label fx:id="lblBusFranchiseErr" layoutX="40.0" layoutY="140.0" prefHeight="17.0" prefWidth="200.0" text="Label" textFill="RED" />
+            <Label fx:id="lblBusNumberErr" layoutX="38.0" layoutY="230.0" prefHeight="17.0" prefWidth="200.0" text="Label" textFill="RED" />
+            <Label fx:id="lblBusFeeTypeErr" layoutX="38.0" layoutY="314.0" prefHeight="17.0" prefWidth="200.0" text="Label" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane opacity="0.75" prefHeight="100.0" prefWidth="950.0" style="-fx-background-color: #D3E1AC;">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="21.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ph_seal_cebucity.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="121.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cebu South Bus Terminal">
+               <font>
+                  <Font name="Open Sans Bold" size="24.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="transactButton" buttonType="RAISED" layoutX="449.0" onAction="#arrivalWindowTransactPressed" prefHeight="100.0" prefWidth="125.0" style="-fx-text-fill: #000000;" text="TRANSACT" textOverrun="CLIP">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="voidButton" buttonType="RAISED" layoutX="575.0" maxWidth="130.0" onAction="#arrivalWindowVoidPressed" prefHeight="100.0" prefWidth="125.0" style="-fx-text-fill: #000000;" text="VOID" textOverrun="CLIP">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="cashierButton" buttonType="RAISED" layoutX="700.0" onAction="#arrivalWindowCashierPressed" prefHeight="100.0" prefWidth="125.0" style="-fx-text-fill: #000000;" text="CASH01" textOverrun="CLIP">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="logoutButton" buttonType="RAISED" layoutX="825.0" onAction="#arrivalWindowLogoutPressed" prefHeight="100.0" prefWidth="125.0" style="-fx-text-fill: #000000;" text="LOGOUT" textOverrun="CLIP">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="495.0" layoutY="181.0" prefHeight="390.0" prefWidth="275.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <AnchorPane opacity="0.75" prefHeight="40.0" prefWidth="275.0" style="-fx-background-color: #D3E1AC;">
+               <children>
+                  <Text layoutX="100.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MINIBUS">
+                     <font>
+                        <Font name="Open Sans" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="minibusPrintButton" buttonType="RAISED" layoutY="355.0" onAction="#minibusConfirmButtonPushed" opacity="0.75" prefHeight="35.0" prefWidth="275.0" style="-fx-background-color: #D3E1AC; -fx-text-fill: #000000;" text="Print" />
+            <JFXComboBox fx:id="minibusFDD" layoutX="38.0" layoutY="129.0" prefHeight="35.0" prefWidth="200.0" promptText="CERES" />
+            <Text layoutX="38.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plate number">
+               <font>
+                  <Font name="Open Sans" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="38.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Franchise">
+               <font>
+                  <Font name="Open Sans" size="14.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="plateNumber" layoutX="38.0" layoutY="232.0" prefHeight="35.0" prefWidth="200.0" />
+            <Label fx:id="lblMiniBusFranchiseErr" layoutX="38.0" layoutY="164.0" prefHeight="17.0" prefWidth="200.0" text="Label" textFill="RED" />
+            <Label fx:id="lblMiniBusPlateNumberErr" layoutX="38.0" layoutY="267.0" prefHeight="17.0" prefWidth="200.0" text="Label" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
